@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Minha Página Pessoal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Botão de mudar cor da página -->
+    <button id="toggleTheme" class="theme-btn">Modo Escuro</button>
+
+    <img src="assets/foto curriculo.jpg" alt="Minha Foto">
+
+    <a href="https://www.linkedin.com/in/david-reis-659b84255/" target="_blank" class="btn">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+    <a href="https://www.instagram.com/david.reis14/" target="_blank" class="btn">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="assets/David_F_Reis_Leite_Curriculo_TI pdf.pdf" download class="btn">
+      <i class="fas fa-file-pdf"></i> Baixar Currículo
+    <a href="https://github.com/davidreis07" target="_blank" class="btn">
+      <i class="fab fa-github"></i> github
+    </a>
+      
+  </div>
+
+  <script>
+    const btn = document.getElementById('toggleTheme');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      if(document.body.classList.contains('dark-mode')) {
+        btn.textContent = 'Modo Claro';
+      } else {
+        btn.textContent = 'Modo Escuro';
+      }
+    });
+  </script>
+</body>
+</html>
